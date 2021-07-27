@@ -20,7 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Route::get('/privacy-policy', [App\Http\Controllers\API\PrivacyPolicyController::class,'show']);
 Route::get('/users', [App\Http\Controllers\API\UserController::class,'index']);
+Route::get('/users/show/{user}', [App\Http\Controllers\API\UserController::class,'show']);
 Route::post('/users/create', [App\Http\Controllers\API\UserController::class,'store']);
+Route::post('/users/update/{user}', [App\Http\Controllers\API\UserController::class,'update']);
 Route::delete('/users/{user}', [App\Http\Controllers\API\UserController::class,'delete']);
 
 Route::get('/inventory', [App\Http\Controllers\API\InventoryController::class,'index']);
