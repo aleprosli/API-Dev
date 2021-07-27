@@ -46,6 +46,28 @@ class UserController extends Controller
         ]);
     }
 
+    public function update(Request $request,User $user)
+    {
+        $user -> update([
+            'name' => $request->name,
+            'email' => $request->email,
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Successfully update users'
+        ]);
+    }
+
+    public function show(User $user)
+    {
+        return response()->json([
+            'success' => true,
+            'message' => 'success show',
+            'data' => $user
+        ]);
+    }
+
     public function delete(User $user)
     {
         $user->delete();
