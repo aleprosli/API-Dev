@@ -53,6 +53,8 @@ class Handler extends ExceptionHandler
         if ($exception instanceof ModelNotFoundException && $request->wantsJson()) {
             return response()->json(['message' => 'The requested resources is not available!'], 404);
         }
+
+        return parent::render($request, $exception);
     }
     
 }
