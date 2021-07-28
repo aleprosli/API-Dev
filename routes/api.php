@@ -18,7 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/privacy-policy', [App\Http\Controllers\API\PrivacyPolicyController::class,'show']);
 Route::get('/users', [App\Http\Controllers\API\UserController::class,'index']);
 Route::get('/users/show/{user}', [App\Http\Controllers\API\UserController::class,'show']);
 Route::post('/users/create', [App\Http\Controllers\API\UserController::class,'store']);
