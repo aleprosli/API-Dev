@@ -19,5 +19,6 @@
             </div>
         </div>
     </div>
+    <passport-token></passport-token>
 </div>
 @endsection
