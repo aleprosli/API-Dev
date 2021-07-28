@@ -50,4 +50,37 @@ class InventoryController extends Controller
             'data' => $inventories
         ]);
     }
+
+    public function update(Request $request,Inventory $inventories)
+    {
+        $user -> update([
+            'name' => $request->name,
+            'serialnumber' => $request->serialnumber,
+            'type' => $request->type,
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Successfully update inventory'
+        ]);
+    }
+
+    public function show(Inventory $inventories)
+    {
+        return response()->json([
+            'success' => true,
+            'message' => 'success show',
+            'data' => $inventories
+        ]);
+    }
+
+    public function delete(Inventory $inventories)
+    {
+        $inventories->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Successfuly deleted'
+        ]);
+    }
 }
