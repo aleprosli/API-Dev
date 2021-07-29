@@ -15,5 +15,6 @@ class Inventory extends Model
         'name',
         'serialnumber',
         'type',
+        'amount',
     ];
 }
