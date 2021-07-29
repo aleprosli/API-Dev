@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/basic-auth', function(){
+    return 'Successfully access basic authetication API';
+})->middleware('auth.basic');
+
 Route::post('/login', [App\Http\Controllers\API\AuthController::class,'login']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
