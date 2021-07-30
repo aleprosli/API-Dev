@@ -9,5 +9,6 @@ class PrivacyPolicyController extends Controller
 {
     public function show()
     {
-        return 'This is PP from Controller';    }
+        return 'This is PP from Controller';    
+    }
 }
