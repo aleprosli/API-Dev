@@ -17,7 +17,11 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
+            
         </div>
+    </div>
+    <div class="col-md-4">
+    <a href="{{ route('inventory') }}" class="btn btn-success">Purchase</a>
     </div>
     <passport-token></passport-token>
 </div>

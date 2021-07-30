@@ -24,6 +24,7 @@ class InventoryController extends Controller
             'message' => 'Successfully show all inventory',
             'data' => $inventories
         ]);
+        
     }
 
     public function store(Request $request)
